@@ -36,6 +36,7 @@ public class AudioManager : MonoBehaviour
         if (musicClips.Length > 0 && !isMuted)
         {
             audioSource.clip = musicClips[currentClipIndex];
+            audioSource.loop = false; // Parçalarýn döngüye girmemesi için
             audioSource.Play();
         }
     }
@@ -55,7 +56,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            audioSource.Play();
+            PlayMusic();
         }
     }
 }

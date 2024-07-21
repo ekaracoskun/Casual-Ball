@@ -833,8 +833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   losePanel: {fileID: 46205127}
   timerText: {fileID: 996232522}
-  timeLimit: 180
-  totalOtherBalls: 9
+  timeLimit: 300
+  totalOtherBalls: 14
 --- !u!1 &355035295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,7 +3206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: 680}
+  m_AnchoredPosition: {x: 45, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &996232522
@@ -5968,10 +5968,10 @@ RectTransform:
   - {fileID: 605960137}
   m_Father: {fileID: 671019272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3241.5, y: 1132.2}
-  m_SizeDelta: {x: 107.748, y: 102.2454}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -2080, y: 180}
+  m_SizeDelta: {x: 107.74805, y: 102.27}
   m_Pivot: {x: -19.262972, y: 7.072754}
 --- !u!1 &2073890221
 GameObject:

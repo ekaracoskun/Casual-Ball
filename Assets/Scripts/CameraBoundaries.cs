@@ -23,7 +23,7 @@ public class CameraBoundaries : MonoBehaviour
         topWall.transform.localScale = new Vector3(cameraWidth, wallThickness, 1);
 
         // Alt duvar
-        bottomWall.transform.position = new Vector3(cameraPosition.x, cameraPosition.y - cameraHeight / 2 - wallThickness / 2, 0);
+        bottomWall.transform.position = new Vector3(cameraPosition.x, cameraPosition.y - cameraHeight / 2 + wallThickness / 2, 2);
         bottomWall.transform.localScale = new Vector3(cameraWidth, wallThickness, 1);
 
         // Sol duvar
@@ -33,5 +33,21 @@ public class CameraBoundaries : MonoBehaviour
         // Sað duvar
         rightWall.transform.position = new Vector3(cameraPosition.x + cameraWidth / 2 + wallThickness / 2, cameraPosition.y, 0);
         rightWall.transform.localScale = new Vector3(wallThickness, cameraHeight, 1);
+    }
+
+    void OnDrawGizmos()
+    {
+        if (mainCamera == null)
+            mainCamera = Camera.main;
+
+        Vector3 cameraPosition = mainCamera.transform.position;
+        float cameraHeight = 2f * mainCamera.orthographicSize;
+        float cameraWidth = cameraHeight * mainCamera.aspect;
+
+        Gizmos.color = Color.red;
+
+        // Alt sýnýrý çiz
+        Gizmos.DrawLine(new Vector3(cameraPosition.x - cameraWidth / 2, cameraPosition.y - cameraHeight / 2, 0),
+                        new Vector3(cameraPosition.x + cameraWidth / 2, cameraPosition.y - cameraHeight / 2, 0));
     }
 }
